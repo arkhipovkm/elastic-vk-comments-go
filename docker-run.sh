@@ -1,0 +1,2 @@
+docker run --name elasticsearch -d -v /mnt/disks/disk2/elastic/data/:/data/ --net elasticnetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "path.data=/data/" elasticsearch:7.9.0
+docker run --name kibana -d --net elasticnetwork -p 5601:5601 kibana:7.9.0 
